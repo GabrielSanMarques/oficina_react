@@ -1,3 +1,7 @@
+/*
+  Link slide: https://docs.google.com/presentation/d/1946AIDlJ2nlBlvPZ7fwzyzeiwdBqmKJCam7jFNcyYKQ/edit#slide=id.gff8ede9229_0_112
+*/
+
 import './App.css';
 import React, { useEffect, useState } from "react";
 import Acoes from './components/Acoes/Acoes';
@@ -135,7 +139,6 @@ function App() {
           estoque.comercio * processos.vender
         );
       }
-    
     }, 1000);
     return () => clearInterval(intervalo);
   });
