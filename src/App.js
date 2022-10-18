@@ -105,7 +105,7 @@ function App() {
       default:
         break;
     }
-  }
+  };
 
   /*
   function compraUpgrade(id) {
@@ -168,7 +168,7 @@ function App() {
       <Acoes 
         transacoes={transacoes}
         handleClick={handleClickAcao}
-        />
+      />
       <Rodape 
         estoque={estoque} 
         transacoes={transacoes} 
