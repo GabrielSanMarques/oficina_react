@@ -23,10 +23,16 @@ export default function Acoes(props) {
                 handleClick={props.handleClick}
             />
             <Acao 
-                id="contratarBtn"
+                id="contratarLenhadorBtn"
                 nome="Contratar lenhador"
                 trocas={transacoes.contratarLenhador}
                 handleClick={props.handleClick}
+            />
+            <Acao 
+                id="abrirComercioBtn" 
+                nome="Abrir comércio" 
+                trocas={transacoes.abrirComercio} 
+                handleClick={props.handleClick} 
             />
         </section>
     );
@@ -34,7 +40,6 @@ export default function Acoes(props) {
 
 function Acao(props) {
     const trocas = props.trocas;
-    console.log(trocas);
     const paresTrocas = Object.entries(trocas);
     const listaTrocas = [];
 
@@ -48,7 +53,8 @@ function Acao(props) {
         if (valor > 0) {
             texto += "+";
         }
-        texto += valor + " " + recurso;
+        texto += valor + " ";
+        texto += recurso === "comercio" ? "comércio" : recurso;
             // Adiciona plural
         if (valor !== 1 && valor !== -1) {
             if (recurso === "trabalhador") {

@@ -24,6 +24,11 @@ export default function Recursos(props){
                 imagem="👷" 
                 valor={estoque.trabalhador} 
             />
+            <Recurso 
+                nome="Comércio" 
+                imagem="🏪"
+                valor={estoque.comercio} 
+            />
         </section>
 
     )
